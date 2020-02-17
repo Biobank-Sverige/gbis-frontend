@@ -1,41 +1,37 @@
 <template>
     <div>
-        <table>
-            <thead>
-            <tr>
-                <td>Sample id</td>
-                <td>Sample study id</td>
-                <td>Sample usage</td>
-                <td>Last usage date</td>
-                <td>Donor</td>
-                <td>Parent sample id</td>
-                <td>Material type</td>
-                <td>Sample volume</td>
-                <td>Freeze/Thaw cycles</td>
-                <td>Plate id</td>
-                <td>Position in plate</td>
-            </tr>
-            </thead>
-        <tr v-for="sample in samples" v-bind:key="sample.sample_id">
-            <td>{{sample.sample_id}}</td>
-            <td>{{sample.study_id}}</td>
-            <td>{{sample.sample_usage}}</td>
-            <td>{{sample.last_usage_date}}</td>
-            <td>{{sample.donor}}</td>
-            <td>{{sample.parent_sample_id}}</td>
-            <td>{{sample.material_type}}</td>
-            <td>{{sample.sample_volume}}</td>
-            <td>{{sample.freeze_thaw_cycles}}</td>
-            <td>{{sample.sample_plate_id}}</td>
-            <td>{{sample.sample_plate_position}}</td>
-
-        </tr>
-        </table>
+        <b-table striped hover :items="samples" :fields="fields"></b-table>
     </div>
 </template>
 
 <script>
+    import 'bootstrap/dist/css/bootstrap.css'
+    import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+    import Vue from 'vue'
+    import {BootstrapVue, IconsPlugin} from 'bootstrap-vue'
+
+    Vue.use(BootstrapVue);
+    Vue.use(IconsPlugin);
     export default {
-        props: ['samples']
+        props: ['samples'],
+        data: () => {
+            return {
+                fields: [
+                    {key: 'sample_id', sortable: true},
+                    {key: 'study_id', sortable: true},
+                    {key: 'sample_usage', sortable: true},
+                    {key: 'last_usage_date', sortable: true},
+                    {key: 'donor', sortable: true},
+                    {key: 'parent_sample_id', sortable: true},
+                    {key: 'material_type', sortable: true},
+                    {key: 'sample_volume', sortable: true},
+                    {key: 'freeze_thaw_cycles', sortable: true},
+                    {key: 'sample_plate_id', sortable: true},
+                    {key: 'sample_plate_position', sortable: true}
+                ],
+
+            }
+        }
     }
 </script>
