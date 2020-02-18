@@ -10,7 +10,9 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "chart.js": "^2.9.3",
+    "vue-chartjs": "^3.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.0",
