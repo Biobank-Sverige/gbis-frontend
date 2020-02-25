@@ -1,24 +1,17 @@
-# gbis-frontend-client
+Exempelapplikation för att visa data enligt GBIS 3.0
+====================================================
 
-## Project setup
-```
-npm install
-```
+Detta projekt är tänkt som en enkel demo för hur man kan skriva en applikation som visar upp data som finns tillgänglig i GBIS 3.0 format.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Köra lokalt
+-----------
 
-### Compiles and minifies for production
-```
-npm run build
-```
+För att köra projektet lokalt krävs att man har en server som levererar data i GBIS 3.0 format.
+För att sätta upp en sådan lokalt, se [https://github.com/Biobank-Sverige/gbis-server](https://github.com/Biobank-Sverige/gbis-server).
 
-### Lints and fixes files
-```
-npm run lint
-```
+För att köra projektet behövs npm (node package manager), se [https://www.npmjs.com/get-npm](https://www.npmjs.com/get-npm). Projektet är testat med version 6.3.17
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Checka ut projektet lokalt.
+- Kör `npm install`
+- Givet att servern ovan är igång lokalt med standardporten (8080), kör: `npm run serve`
+- Öppna länken som visas ([http://localhost:8081](http://localhost:8081)) i din webbläsare, där ska du nu se en lista på prover samt en graf över provtagningar per tid.
