@@ -12,6 +12,7 @@ För att sätta upp en sådan lokalt, se [https://github.com/Biobank-Sverige/gbi
 För att köra projektet behövs npm (node package manager), se [https://www.npmjs.com/get-npm](https://www.npmjs.com/get-npm). Projektet är testat med version 6.3.17
 
 - Checka ut projektet lokalt.
+- i [app.vue](src/App.vue), ändra "/samples" till "http://localhost:8080"  
 - Kör `npm install`
 - Givet att servern ovan är igång lokalt med standardporten (8080), kör: `npm run serve`
 - Öppna länken som visas ([http://localhost:8081](http://localhost:8081)) i din webbläsare, där ska du nu se en lista på prover samt en graf över provtagningar per tid.
