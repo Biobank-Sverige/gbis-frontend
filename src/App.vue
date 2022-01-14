@@ -26,7 +26,7 @@
         }),
         async mounted() {
             this.loaded = false;
-            const path = 'http://localhost:8080';
+            const path = '/samples';
             axios.get(path)
                 .then((res) => {
                     console.log(res);
